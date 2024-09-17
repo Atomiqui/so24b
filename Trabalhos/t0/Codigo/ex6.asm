@@ -1,6 +1,6 @@
 ; programa de exemplo para SO
-; lê dois números do teclado,
-; imprime números entre eles na tela
+; lê dois numeros do teclado,
+; imprime numeros entre eles na tela
 
 ; definições para o terminal B (ver dispositivos.h)
 TECL    DEFINE 4
@@ -42,7 +42,7 @@ pe_esp2 valor 10
 ; função para ler um inteiro da entrada (retorna em A)
 ; destroi X
 leint   espaco 1
-        ; inicializa número (0) e sinal (1)
+        ; inicializa numero (0) e sinal (1)
         cargi 0
         armm li_num
         cargi 1
@@ -78,7 +78,7 @@ li_3
         armm li_num
         desv li_1
 li_f
-        ; final, o número está em li_num, o sinal em li_sig
+        ; final, o numero está em li_num, o sinal em li_sig
         ; foi lido um caractere a mais, infelizmente não tem como devolvê-lo
         ; para a entrada como o scanf faz, vai ser perdido...
         cargm li_num
@@ -185,7 +185,7 @@ es_f
 es_x    espaco 1
 
 main
-        ; print "Digite número inicial"
+        ; print "Digite numero inicial"
         cargi msg_ini
         chama escstr
         ; ini = leint()
@@ -194,7 +194,7 @@ main
         ; limpa tela
         cargi LIMPA
         chama escch
-        ; print "Digite número final"
+        ; print "Digite numero final"
         cargi msg_fim
         chama escstr
         ; fim = leint()
@@ -226,6 +226,6 @@ dez     valor 10
 nove    valor 9
 a_zero  valor '0'
 a_menos valor '-'
-msg_ini string "Digite número inicial"
-msg_fim string "Digite número final"
+msg_ini string "Digite numero inicial"
+msg_fim string "Digite numero final"
 

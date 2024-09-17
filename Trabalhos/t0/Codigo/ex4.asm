@@ -1,7 +1,7 @@
 ; programa de exemplo para SO
-; pede para o usuário adivinhar a letra secreta
+; pede para o usuario adivinhar a letra secreta
 
-; definições devem corresponder ao que está em dispositivos.h
+; definições devem corresponder ao que esta em dispositivos.h
 teclado  define 0
 teclOK   define 1
 tela     define 2
@@ -14,11 +14,11 @@ laco     chama lechute
          desvz laco
          para
 
-str1     string 'Olá. Escolhi uma letra minúscula. Adivinha qual.       '
+str1     string 'Ola. Escolhi uma letra minuscula. Adivinha qual.       '
 str2     valor 10 ; \n, limpa a linha (o montador não entende \n dentro da string)
-         string 'Digite uma letra minúscula '
+         string 'Digite uma letra minuscula '
 
-; le um caractere do usuario, até que seja minúscula
+; le um caractere do usuario, até que seja minuscula
 lechute  espaco 1
 lechute1 cargi str2
          chama impstr

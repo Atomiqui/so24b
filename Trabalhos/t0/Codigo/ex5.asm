@@ -1,5 +1,5 @@
 ; programa de exemplo para SO
-; pede para o usuário adivinhar um número
+; pede para o usuario adivinhar um numero
 
 ; definições para o terminal B (ver dispositivos.h)
 TECL    DEFINE 4
@@ -15,11 +15,11 @@ laco     chama lechute
          chama vechute
          desvz laco
          para
-str1     string 'Olá. Escolhi um número entre 1 e 100. Adivinha qual.       '
+str1     string 'Ola. Escolhi um numero entre 1 e 100. Adivinha qual.       '
 str2     valor LIMPA
-         string 'Digite um número entre 1 e 100 '
+         string 'Digite um numero entre 1 e 100 '
 
-; lê um número do usuário, até que seja válido
+; lê um numero do usuario, até que seja valido
 lechute  espaco 1
 lechute1 cargi str2
          chama escstr
@@ -93,7 +93,7 @@ pe_esp2 valor 10
 ; função para ler um inteiro da entrada (retorna em A)
 ; destroi X
 leint   espaco 1
-        ; inicializa número (0) e sinal (1)
+        ; inicializa numero (0) e sinal (1)
         cargi 0
         armm li_num
         cargi 1
@@ -129,7 +129,7 @@ li_3
         armm li_num
         desv li_1
 li_f
-        ; final, o número está em li_num, o sinal em li_sig
+        ; final, o numero esta em li_num, o sinal em li_sig
         ; foi lido um caractere a mais, infelizmente não tem como devolvê-lo
         ; para a entrada como o scanf faz, vai ser perdido...
         cargm li_num
