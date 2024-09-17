@@ -18,7 +18,7 @@ str1     string 'Ola. Escolhi uma letra minuscula. Adivinha qual.       '
 str2     valor 10 ; \n, limpa a linha (o montador não entende \n dentro da string)
          string 'Digite uma letra minuscula '
 
-; le um caractere do usuario, até que seja minuscula
+; le um caractere do usuario, ate que seja minuscula
 lechute  espaco 1
 lechute1 cargi str2
          chama impstr
@@ -48,7 +48,7 @@ lechar1  le teclOK
          le teclado
          ret lechar
 
-; ve se chute em A é bom, escreve mensagem, retorna 1 se for
+; ve se chute em A e bom, escreve mensagem, retorna 1 se for
 vechute  espaco 1
          ; coloca o chute no meio da msg e imprime
          armm chute
@@ -75,7 +75,7 @@ chuteok  cargi msg_ok
          ret vechute
 msg_peq  string 'muito pequeno, tente novamente '
 msg_gr   string 'muito grande, tente novamente '
-msg_ok   string 'parabéns, você acertou!!'
+msg_ok   string 'parabens, você acertou!!'
 msg_chut valor 10
          valor "'"
 chute    espaco 1
