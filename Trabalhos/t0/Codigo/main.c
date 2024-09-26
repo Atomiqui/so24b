@@ -116,4 +116,3 @@ int main(int argc, char *argv[])
   // destroi tudo
   destroi_hardware(&hw);
 }
-

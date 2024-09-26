@@ -24,7 +24,7 @@
 ;     STRING "abc" -> coloca os caracteres a, b, c e \0 na memória
 ;     ESPACO x     -> coloca 'x' valores 0 nas próximas posições de memória
 ; lab DEFINE x     -> define o label 'lab' com o valor x e não com o end. atual
-
+;
 ; o dispositivo correspondente à tela do primeiro terminal é 2 (veja dispositivos.h)
 tela     DEFINE 2
          ; x = 0
