@@ -93,10 +93,10 @@ Além disso, para que o SO tenha a chance de ser a primeira coisa a executar, a 
 Entenda as mudanças no código e o funcionamento do SO.
 
 Faça uma implementação inicial de processos:
-- crie um tipo de dados que é uma estrutura que contém as informações a respeito de um processo
-- crie uma tabela de processos, que é um vetor dessas estruturas
+- crie um tipo de dados que é uma estrutura que contém as informações a respeito de um processo - Em andamento.
+- crie uma tabela de processos, que é um vetor dessas estruturas - Em andamento.
 - inicialize a primeira entrada nessa tabela (o primeiro processo) na criação do init
-- crie uma variável que designe o processo em execução. Faça de tal forma que tenha suporte a não ter nenhum processo em execução
+- crie uma variável que designe o processo em execução. Faça de tal forma que tenha suporte a não ter nenhum processo em execução - Ok.
 - faça funções para salvar o estado do processador na tabela de processos (na entrada correspondente ao processo em execução) e para recuperar o estado do processador a partir da tabela; use essas funções para implementar so_salva_estado_da_cpu e so_despacha.
 - implemente a função do escalonador (so_escalona). Ela escolhe o próximo processo a executar (altera a variável que designa o processo em execução). Pode ser bem simples: se o processo que estava em execução estiver pronto continua sendo executado e se não, escolhe o primeiro que encontrar na tabela que esteja pronto.
 - implemente as chamadas de criação e morte de processos
