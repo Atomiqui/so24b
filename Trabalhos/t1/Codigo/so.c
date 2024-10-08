@@ -63,13 +63,13 @@ so_t *so_cria(cpu_t *cpu, mem_t *mem, es_t *es, console_t *console)
   //   foi definido acima)
   int ender = so_carrega_programa(self, "trata_int.maq");
   if (ender != IRQ_END_TRATADOR) {
-    console_printf("SO: problema na carga do programa de tratamento de interrupção");
+    console_printf("SO: problema na carga do programa de tratamento de interrupcao");
     self->erro_interno = true;
   }
 
   // programa o relógio para gerar uma interrupção após INTERVALO_INTERRUPCAO
   if (es_escreve(self->es, D_RELOGIO_TIMER, INTERVALO_INTERRUPCAO) != ERR_OK) {
-    console_printf("SO: problema na programação do timer");
+    console_printf("SO: problema na programacao do timer");
     self->erro_interno = true;
   }
 
@@ -225,7 +225,7 @@ static void so_trata_irq_err_cpu(so_t *self)
   //   (em geral, matando o processo)
   mem_le(self->mem, IRQ_END_erro, &err_int);
   err_t err = err_int;
-  console_printf("SO: IRQ não tratada -- erro na CPU: %s", err_nome(err));
+  console_printf("SO: IRQ nao tratada -- erro na CPU: %s", err_nome(err));
   self->erro_interno = true;
 }
 
@@ -237,13 +237,13 @@ static void so_trata_irq_relogio(so_t *self)
   e1 = es_escreve(self->es, D_RELOGIO_INTERRUPCAO, 0); // desliga o sinalizador de interrupção
   e2 = es_escreve(self->es, D_RELOGIO_TIMER, INTERVALO_INTERRUPCAO);
   if (e1 != ERR_OK || e2 != ERR_OK) {
-    console_printf("SO: problema da reinicialização do timer");
+    console_printf("SO: problema da reinicializacao do timer");
     self->erro_interno = true;
   }
   // t1: deveria tratar a interrupção
   //   por exemplo, decrementa o quantum do processo corrente, quando se tem
   //   um escalonador com quantum
-  console_printf("SO: interrupção do relógio (não tratada)");
+  console_printf("SO: interrupcao do relogio (nao tratada)");
 }
 
 // foi gerada uma interrupção para a qual o SO não está preparado
