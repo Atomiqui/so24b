@@ -30,6 +30,9 @@ main: ${OBJS_MAIN}
 # monta os programas de usuário nos endereços equivalentes em ENDS
 # se alguém souber de uma forma menos escrota de casar o endereço com
 # o nome, por favor fala
+
+SHELL = /bin/bash
+
 %.maq: %.asm montador
 	@m=(${MAQS}); \
 	e=(${ENDS}); \
